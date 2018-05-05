@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/pages/Home';
 import HomeContent from '@/pages/HomeContent';
 import MyContent from '@/pages/MyContent';
+import ExploreContent from '@/pages/ExploreContent';
 
 Vue.use(Router);
 
@@ -19,6 +20,10 @@ export default new Router({
         {
           path: 'home',
           redirect:'/'
+        },
+        {
+          path: 'explore',
+          component:ExploreContent
         },
         {
           path: 'my',

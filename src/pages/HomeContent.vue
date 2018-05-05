@@ -1,30 +1,31 @@
 <template>
   <div class="home_content">
-    <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
-        <router-link to="/" slot="left">
-        <mt-button icon="back">返回</mt-button>
-        </router-link>
+    <mt-header title="首页">
         <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
      <div>
+        <input type="button" value="增加" @click="increment">
+       <input type="button" value="减少" @click="decrement">
+        <input type="button" value="异步" @click="asyn">
+    <div>
+      目前的数字是:{{count}}
+    </div>
      </div>
   </div>
 </template>
 
 <script>
 import { Header, Button } from 'mint-ui';
+import {mapGetters,mapActions} from 'vuex';
 
 export default {
   name: 'home-content',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
+  components:{
+   'mt-header':Header,
+   'mt-button':Button
   },
-  components: {
-    'mt-header': Header,
-    'mt-button': Button
-  }
+  computed:mapGetters(['count']),
+  methods:mapActions(['increment','decrement','asyn'])
 };
 </script>
 

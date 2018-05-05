@@ -3,15 +3,15 @@
      <router-view></router-view>
     <mt-tabbar v-model="selected" @click="changetab">
         <mt-tab-item id="home">
-            <img slot="icon" src="../assets/logo.png">
+            <img slot="icon" src="../assets/home.png">
             首页
         </mt-tab-item>
         <mt-tab-item id="explore" @click="changetab">
-            <img slot="icon" src="../assets/logo.png">
+            <img slot="icon" src="../assets/explore.png">
             发现
         </mt-tab-item>
         <mt-tab-item id="my">
-            <img slot="icon" src="../assets/logo.png">
+            <img slot="icon" src="../assets/user.png">
             我的
         </mt-tab-item>
     </mt-tabbar>
