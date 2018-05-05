@@ -5,7 +5,7 @@ body {
   height: 100%;
 }
 body {
-  font: 12px 'microsoft yahei', Arial, Helvetica, sans-serif;
+  font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
   color: #666;
   margin: 0px;
   padding: 0px;
@@ -38,4 +38,14 @@ a {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+  }
+
+  .lf{
+    float:left;
+  }
+  .rf{
+    float: right;
+  }
+  .clear{
+    clear: both;
   }

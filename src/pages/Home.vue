@@ -1,7 +1,7 @@
 <template>
   <div class="home">
      <router-view></router-view>
-    <mt-tabbar v-model="selected" @click="changetab">
+    <mt-tabbar v-model="selected" @click="changetab" :fixed="true">
         <mt-tab-item id="home">
             <img slot="icon" src="../assets/home.png">
             首页
@@ -26,7 +26,9 @@ export default {
   name: 'Home',
   data() {
     return {
-      selected: 'home'
+      selected: 'home',
+      
+
     };
   },
   components: {
@@ -35,14 +37,11 @@ export default {
   },
   methods: {
     changetab() {
-      console.log(this.selected);
     }
   },
   watch: {
     selected: function (val, oldVal) {
-     console.log(this.$router)   
      this.$router.push({path:'/'+val});
-      console.log('new: %s, old: %s', val, oldVal)
     }
   }
 };
@@ -50,5 +49,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+   .home{
+     height: 100%;
+   }
 </style>

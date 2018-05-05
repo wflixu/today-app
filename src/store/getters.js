@@ -9,5 +9,8 @@ export const recentHistory = state => {
       .slice(begin, end)
       .join(', ')
   }
-
+export const postList = state=>{
+    console.log(state.posts)
+   return state.posts
+}
   
