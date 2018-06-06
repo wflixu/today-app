@@ -1,8 +1,5 @@
 <template>
   <div class="home_content">
-    <mt-header title="首页">
-        <mt-button icon="more" slot="right"></mt-button>
-    </mt-header>
      <div class="content">
         <div class="post_list" v-show="postList.length>0" >
           <div class="post" v-for="(v,k) in postList" :key="k" >
@@ -52,28 +49,28 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.home_content {
-  background-color: #aaa;
-  height: 100%;
-}
-.post_list{
-  background-color: #aaa;
-}
-.post {
- 
-  background-color: #fff;
-  margin-bottom: 10px;
-}
+<style scoped lang="stylus">
+.home_content 
+  background-color #aaa
+  height 100%
+
+.post_list
+  background-color  #aaa
+
+.post 
+  background-color  #fff
+  margin-bottom  10px
+
 .post_header {
   text-align: left;
   padding: 5px 10px;
   font-size: 12px;
 }
-.post_header > img {
-  width: 30px;
-  height: 30px;
-}
+.post_header
+  img 
+    width: 30px;
+    height: 30px;
+
 .post_header > div {
   display: inline-block;
   vertical-align: top;

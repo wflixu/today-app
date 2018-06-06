@@ -53,7 +53,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped  lang="stylus">
 .my_header {
   position: relative;
 }
@@ -67,14 +67,13 @@ export default {
   background-color: hotpink;
 }
 
-.my_avatar {
+.my_avatar 
   position: absolute;
   z-index: 200;
   top: 60px;
   height: 40px;
   width: 100%;
   text-align: center;
-}
 
 .my_avatar > img {
   height: 40px;

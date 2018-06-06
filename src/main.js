@@ -4,6 +4,7 @@ import './assets/main.css';
 import store from './store/index'
 import App from './App';
 import router from './router';
+import 'babel-polyfill';
 
 
 
