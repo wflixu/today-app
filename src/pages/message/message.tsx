@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 
 import { ListView } from 'antd-mobile';
+import {msgs as data} from '../../assets/data/message'
 
-const data =
 const NUM_SECTIONS = 5;
 const NUM_ROWS_PER_SECTION = 5;
 let pageIndex = 0;

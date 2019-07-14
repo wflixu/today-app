@@ -3,15 +3,15 @@ import React from 'react';
 import './my.css';
 
 export default class User extends React.Component {
-    render() {
+   public render() {
         return (
             <div>
                 <div className="my-info">
                     <div className="info-top">
                         <div className="top-bar">
-                            <a href="#" className="set"></a>
+                            <a href="#" className="set"/>
                         </div>
-                        <div className="avatar"></div>
+                        <div className="avatar" />
                     </div>
                     <div className="user-name">geront</div>
                 </div>
@@ -23,7 +23,7 @@ export default class User extends React.Component {
                 <div className="tab-content">
                     <ul className="contact-list">
                         <li className="contact">
-                            <div className="contact-avatar"></div>
+                            <div className="contact-avatar"/>
                             <div className="detail">
                                 <div className="message">
                                     <p className="contact-name">user name</p>
@@ -31,7 +31,6 @@ export default class User extends React.Component {
                                 </div>
                                 <div className="contact-icon">icon</div>
                             </div>
-
                         </li>
                     </ul>
                 </div>

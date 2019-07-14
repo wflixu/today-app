@@ -1,4 +1,5 @@
-[
+import {IPost} from './../../components/post/index';
+export const posts:IPost[] = [
     {
         "avatar": "",
         "user_name": "username",
@@ -34,3 +35,5 @@
     }
     
 ]
+
+
