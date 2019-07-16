@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect, RouteComponentProps }
 import homePage from "./pages/home/index";
 import exporePage from "./pages/expore/expore";
 import myPage from './pages/my/My';
-import Login from './pages/login';
+import Login from './pages/login/index';
 import SignPage from './pages/sign';
 // import Header from "./components/Header";
 // import LoginPage from './pages/LoginPage';

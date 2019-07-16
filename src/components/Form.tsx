@@ -19,7 +19,7 @@ export const required: Validator = (
     values[fieldName] === undefined
         || values[fieldName] === null
         || values[fieldName] === ""
-        ? "This must be populated" : "";
+        ? "不能为空" : "";
 
 export const minLength: Validator = (
     fieldName: string,
@@ -27,7 +27,7 @@ export const minLength: Validator = (
     length: number
 ): string =>
     values[fieldName] && values[fieldName].length < length
-        ? `This must be at least ${length} characters` : "";
+        ? `最少要 ${length} 字符` : "";
 
 export interface ISubmitResult {
     success: boolean;
