@@ -10,7 +10,7 @@ import App from './App';
 
 
 
-import './main.css';
+import './main.less';
 
 // const store = configureStore();
 
