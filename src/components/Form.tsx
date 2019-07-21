@@ -28,10 +28,11 @@ export const minLength: Validator = (
 ): string =>
     values[fieldName] && values[fieldName].length < length
         ? `最少要 ${length} 字符` : "";
-
+       
 export interface ISubmitResult {
-    success: boolean;
-    errors?: IErrors;
+    data:string; 
+    status:number;
+    
 }
 
 interface IValidation {
@@ -233,9 +234,11 @@ export class Form extends React.Component<IFormProps, IState>{
         if (this.validateForm()) {
             this.setState({ submitting: true });
             const result = await this.props.onSubmit(this.state.values);
+          
+            
             this.setState({
-                errors: result.errors || {},
-                submitted: result.success,
+                // errors: result.errors || {},
+                submitted: result.data ==='success'? true:false,
                 submitting: false
             });
         }

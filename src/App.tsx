@@ -7,6 +7,7 @@ import exporePage from "./pages/expore/expore";
 import myPage from './pages/my/My';
 import Login from './pages/login/index';
 import SignPage from './pages/sign';
+import PostPage from './pages/post/post';
 // import Header from "./components/Header";
 // import LoginPage from './pages/LoginPage';
 // import ContactUsPage from './pages/ContactUsPage';
@@ -27,6 +28,7 @@ const Routes: React.SFC<RouteComponentProps> = (props) => {
                         <Route  path="/my" component={myPage} />
                         <Route  path="/login" component={Login} />
                         <Route  path="/sign" component={SignPage} />
+                        <Route  path="/post" component={PostPage} />
                        
                     </Switch>
             

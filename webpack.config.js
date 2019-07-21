@@ -36,7 +36,7 @@ module.exports = {
         proxy: {
             '/user': 'http://127.0.0.1:7001',
         },
-        open: true,
+        // open: true,
         port: 9000
     },
     plugins: [
