@@ -34,8 +34,9 @@ module.exports = {
         compress: true,
         historyApiFallback: true,
         proxy: {
-            '/user': 'http://127.0.0.1:7001',
+            '/1.1': 'http://awgkVY8X.api.lncld.net',
         },
+        // https:true,
         // open: true,
         port: 9000
     },
