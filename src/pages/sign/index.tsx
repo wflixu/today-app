@@ -46,15 +46,30 @@ class SignPage extends React.Component<{}, IState>{
            uname:this.state.username,
            pass:this.state.password,
        } 
-       axios.post('/user/sign',data).then((response)=>{
-            console.log(response.data);
-       }).catch((error)=>{
-           console.log(error);   
-       })
+        axios({
+            url:'/1.1/users',
+            method:'post',
+            headers: {
+                'X-LC-Id': 'awgkVY8XvUY5oWtvmzRH6ylj-gzGzoHsz',
+                'X-LC-Key': 'GJnJ1a8KVnaVLquMKj6uSllD'
+            },
+            data:{
+                username: data.uname,
+                password: data.pass,   
+            }
+        }).then((res)=>{
+            console.log(res.data);
+            
+        })
+    //    axios.post('/1.1/users',data).then((response)=>{
+    //         console.log(response.data);
+    //    }).catch((error)=>{
+    //        console.log(error);   
+    //    })
     }
     private validate ():boolean {
          const {username,password,password2} = this.state;
-        return username.length>3 && password ===password2 && password.length>3;
+        return username.length>3 && password ===password2 && password.length>=3;
     }
     public render() {
         return (

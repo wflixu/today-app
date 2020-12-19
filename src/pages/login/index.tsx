@@ -46,17 +46,17 @@ class LoginPage extends React.Component<{}, IState>{
             }
         }).then((response) => {
             console.log(response.data);
-            // if(response.data === 'success'){
-            //     window.location.assign('/home')
-            // }
-            // this.setState({
-            //     uname:'',
-            //     pass:'',
-            //     submitting:false
-            // })
-            // return {
-            //     success: response.data === 'success' ? true : false,
-            // };
+            if(response.data.sessionToken){
+                window.location.assign('/home')
+            }
+            this.setState({
+                uname:'',
+                pass:'',
+                submitting:false
+            })
+            return {
+                success: response.data === 'success' ? true : false,
+            };
         }).catch((error) => {
             console.log(error);
             return {
