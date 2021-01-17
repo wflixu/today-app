@@ -1,15 +1,21 @@
 <template>
-    <div>
-          test
-    </div>
+  <div>
+     <button @click="toggle">toggle</button>
+  </div>
 </template>
 
 <script>
-    export default {
-        
+
+export default {
+    data:function(){
+        return {}
+    },
+    methods:{
+        toggle(event){   
+           console.log(event)
+        }
     }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
